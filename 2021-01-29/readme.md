@@ -1,12 +1,6 @@
 # Topics
 
-## Subtopic 
-
-### An h3
-Some interesting bits
-* aaa
-* bbb
-
-## Wish list
-(A great place for course participants/students to submit issues of interest)
-* (@Anyone, enter first topic here)
+## Chapter 6 - Additional Language Features
+* Slides  9...13 - Varargs
+* Slides 14...18 - Enums
+* Slides 23...27 - Static Imports
