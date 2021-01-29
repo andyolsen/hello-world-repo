@@ -4,3 +4,6 @@
 * Slides  9...13 - Varargs
 * Slides 14...18 - Enums
 * Slides 23...27 - Static Imports
+
+## Chapter 7 - Additional Java SE Classes
+* Let's see how we get on ...
