@@ -5,5 +5,6 @@
 * Slides 14...18 - Enums
 * Slides 23...27 - Static Imports
 
-## Chapter 7 - Additional Java SE Classes
-* Let's see how we get on ...
+## Lab
+* Have a go at Lab 6 - exercises 2 onwards. We can review on Monday.
+* God helg :-)
