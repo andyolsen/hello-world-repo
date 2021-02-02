@@ -15,6 +15,4 @@
 * Lab 7, exercise 3 (regular expressions)
 * Lab 8, exercises 1, 2, 3 (collections)
 
-## Additionally on Wednesday:
-* Finish reading Chapter 8 (Collections and Generics), slides 21 - 31
-* Lab 8, exercises 4, 5
+
