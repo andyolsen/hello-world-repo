@@ -7,7 +7,9 @@
 * Slides 14...27 - Regular Expressions (go through all this section)
 
 ## Chapter 8 - Collections and Generics
-* Slides 1...20 - Understanding the important types of collections in Java, and the meaning of generics
+* Slides 1...7 - Overview of collections and generics
+* Slides 8...14 - The need for generics
+* Slides 15...20 - Using collections
 
 ## Labs (Tuesday afternoon and into Wednesday)
 * Lab 7, exercise 3 (regular expressions)
