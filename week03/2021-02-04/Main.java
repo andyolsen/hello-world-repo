@@ -20,5 +20,10 @@ public class Main {
         for (Employee e: hse) {
             System.out.println(e);
         }
+
+        Measurement<Double> height = new Measurement<>(1.67, "m");
+        Measurement<Integer> attendance = new Measurement<>(0, "fans");
+        Measurement<Long> grainsOfSandOnBeach = new Measurement<>(12222876L, "grains");
+        System.out.println(grainsOfSandOnBeach);
     }
 }
