@@ -44,6 +44,9 @@
 * Slides 1 - 22
 
 
+# Essential topics from the "Java TDD" course
+
+## Chapters 1 - 4, all slides (note some slides talk about Eclipse, so you'll need to translate these in your mind to the equivalent in IntelliJ) 
 
 
 
