@@ -34,6 +34,15 @@
 * Slides 11 - 29
 
 
+# Essential topics from the ".NET TDD" course
+
+## Chapters 1 - 4
+* All slides (note some slides show Visual Studio 2017 screenshots, so you'll need to translate these in your mind to the equivalent in Visual Studio 2019) 
+
+
+
+
+
 
 
 
