@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Creating Multiple Elements Via Data</title>
+</head>
+<body>
+
+<div id='osl-container'></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+    const products = [
+        {desc: 'Swansea City shirt', price: 55, inStock: 20000},
+        {desc: 'Bugatti Divo', price: 4000000, inStock: 1}
+    ]
+    
+    const shops = [
+        'London',
+        'Paris',
+        'NY',
+        'Swansea'
+    ]
+
+    const prodList = React.createElement(
+        'ul', 
+        null, 
+        products.map((p, i) => React.createElement("li", {key: i, title:p.price}, `${p.desc}, in stock: ${p.inStock}`))  
+    )
+    
+    const shopList = React.createElement(
+        'ol', 
+        {type: 'i', reversed: true}, 
+        shops.map((s, i) => React.createElement("li", null, s))
+    )
+    
+    const retailer = React.createElement('div', null,
+        React.createElement('h1', null, 'Catalog'),
+        prodList,
+        React.createElement('h1', null, 'Shops'),
+        shopList
+    )
+    
+    ReactDOM.render(retailer, document.getElementById('osl-container'))
+
+</script>
+
+</body>
+</html>
