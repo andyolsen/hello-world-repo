@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Creating Components Via ES6 Classes [Version 1]</title>
+</head>
+<body>
+
+<div id='app-root'></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+
+    const products = [
+        'Swansea City shirt',
+        'Cardiff City shirt',
+        'Bugatti Divo',
+        '55in OLED HD TV',
+        'Carving skis',
+        'Ski boots',
+    ]
+
+    const shops = [
+        'London',
+        'Paris',
+        'NY',
+        'Swansea',
+    ]
+
+    class ItemsList extends React.Component {
+        render() {
+            if (this.props.isOrdered) {
+                return (
+                    React.createElement(
+                        "ol", 
+                        null,
+                        this.props.enheter.map((item, i) => React.createElement("li", { key: i }, item))
+                    )
+                )
+            }
+            else {
+                return (
+                    React.createElement(
+                        "ul", 
+                        null,
+                        this.props.enheter.map((item, i) => React.createElement("li", { key: i }, item))
+                    )
+                )
+            }
+        }
+    }
+
+    class Retailer extends React.Component {
+        render() {
+            return React.createElement('div', null,
+                React.createElement('h1', null, 'Catalog'),
+                React.createElement(ItemsList, {enheter: products, isOrdered: true}, null),
+                React.createElement('h1', null, 'Shops'),
+                React.createElement(ItemsList, {enheter: shops, isOrdered: false}, null)
+            )
+        }
+    }
+
+    const retailer = React.createElement(Retailer, null, null)
+ 
+    ReactDOM.render(retailer, document.getElementById('app-root'))
+
+</script>
+
+</body>
+</html>

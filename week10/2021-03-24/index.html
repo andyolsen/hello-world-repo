@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple JSX</title>
+</head>
+<body>
+
+<div id='osl-container'></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<script type="text/babel">
+
+    function ItemsList ({items}) { 
+        return (
+            React.createElement(
+                'ul', 
+                null, 
+                items.map((item, i) => React.createElement('li', null, item))
+            )
+        )
+    }
+
+    const data = ["Swans shirt", "Reds shirt"]
+
+    {/*
+    ReactDOM.render(
+        <ItemsList items={data} isOrdered={true} />,
+        document.getElementById("osl-container")
+    )
+    */}
+
+    ReactDOM.render(
+        React.createElement(
+            ItemsList, 
+            {items:data, isOrdered: true}),
+        document.getElementById("osl-container")
+    
+    )
+
+</script>
+
+</body>
+</html>

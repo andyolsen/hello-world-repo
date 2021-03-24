@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Creating Multiple Elements With Data</title>
+</head>
+<body>
+
+<div id='app-root'></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+
+    const productsDataFromRest = [
+        'Swans top',
+        'Cardiff City shirt',
+        'Bugatti Divo',
+        '55in OLED HD TV',
+        'Carving skis',
+        'Ski boots',
+    ]
+    
+    const shopsDataFromRest = [
+        'LONDON',
+        'Paris',
+        'NY',
+        'Swansea',
+    ]
+
+    const crazyPeopleWeKnowFromRest = [
+        'Haaken',
+        'Salim',
+        'Tom'
+    ]
+
+    function ItemsList({items}) {
+        return (
+            React.createElement(
+                "ul", 
+                null, 
+                items.map((item, i) => React.createElement("li", { key: i }, item))
+            )
+        )
+    }
+    
+    // This uses destructuring, automatically extracts an object's properties into variables. 
+    function RetailerUtenDestructuring(obj) {
+
+        var products  = obj.products
+        var shops     = obj.shops
+     
+        return (
+            React.createElement('div', null,
+                React.createElement('h1', null, 'Catalog'),
+                React.createElement(ItemsList, {items: products}, null),
+                React.createElement('h1', null, 'Shops'),
+                React.createElement(ItemsList, {items: shops}, null))
+        )
+    }
+
+    function Retailer({products, shops, crazies}) {
+
+        return (
+            React.createElement('div', null,
+                React.createElement('h1', null, 'My Online Retailer Site'),
+                React.createElement('h2', null, 'Catalog'),
+                React.createElement(ItemsList, {items: products}, null),
+                React.createElement('h2', null, 'Shops'),
+                React.createElement(ItemsList, {items: shops}, null),
+                React.createElement('h2', null, 'Crazy people we know'),
+                React.createElement(ItemsList, {items: crazies}, null))
+        )
+    }
+
+    ReactDOM.render(
+        React.createElement(
+            Retailer, 
+            {products: productsDataFromRest, shops: shopsDataFromRest, crazies: crazyPeopleWeKnowFromRest}, 
+            null), 
+        document.getElementById('app-root')
+    )
+
+</script>
+
+</body>
+</html>
