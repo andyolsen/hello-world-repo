@@ -1,0 +1,15 @@
+fieldset {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid darkgrey;
+    background-color: lightgray;
+}
+
+legend {
+    color: black;
+    background-color: white;
+    border: darkgray 1px solid;
+    font-size: 16pt;
+    font-weight: bold;
+}
